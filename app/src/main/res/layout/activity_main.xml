@@ -1,76 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout
+    android:id="@+id/constraintLayout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".MainActivity"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    android:gravity="center"
+    android:orientation="horizontal"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        tools:context=".MainActivity">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/constraintLayout"
-        android:layout_width="581dp"
-        android:layout_height="880dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
+        <Button
             android:id="@+id/greenButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="drawable-v24/green_circle.png"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/yellowButton"
 
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintLeft_toRightOf="@id/redButton"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="@drawable/green_circle"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="Green"
+            android:textSize="32sp"
+            />
 
-        <ImageButton
+        <Button
             android:id="@+id/redButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="drawable-v24/red_circle.png"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/blueButton"
 
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toLeftOf="@id/greenButton"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:background="@drawable/red_circle"
+            android:layout_marginRight="32dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginTop="32dp"
+            android:text="Red"
+            android:textSize="32sp"
+             />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        tools:context=".MainActivity">
+        <Button
+                android:id="@+id/blueButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-        <ImageButton
-            android:id="@+id/blueButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="drawable-v24/blue_circle.png"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
+                android:background="@drawable/blue_circle"
+                android:layout_marginLeft="32dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginBottom="32dp"
+                android:text="Blue"
+                android:textSize="32sp"
+                />
 
-            app:layout_constraintRight_toLeftOf="@id/yellowButton"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/redButton"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageButton
+        <Button
             android:id="@+id/yellowButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="drawable-v24/yellow_circle.png"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
 
-            app:layout_constraintLeft_toRightOf="@+id/blueButton"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/greenButton"
-            app:layout_constraintTop_toTopOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:background="@drawable/yellow_circle"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:text="Yellow"
+            android:textSize="32sp"
+             />
+    </LinearLayout>
+</LinearLayout>
